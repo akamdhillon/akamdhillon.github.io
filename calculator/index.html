@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="stylesCalc.css">
+    <script src="scriptCalc.js"></script>
+<title>Mortgage Calculator</title>
+</head>
+<body>
+  <div class="main-block">
+    <h1>Quick Mortgage Calculator</h1>
+
+    <form>
+        <label for="amount">Mortgage Amount:</label><br>
+        <label for="amount">$</label>
+        <input type="number" id="amount" name="amount" value="500000.00"><br><br>
+        <label for="amortYears">Amortization Period:</label><br>
+        <input type="number" id="amortYears" name="amortYears" value="25">
+        <label for="amortYears"> years</label><br><br>
+
+        <label for="freq">Payment Frequency:</label><br>
+          <div class="account-type">
+            <input type="radio" value="Monthly" id="monthly" name="freq"/>
+            <label for="monthly" class="radio">Monthly</label>
+            <input type="radio" value="Bi-weekly" id="biweekly" name="freq"/>
+            <label for="biweekly" class="radio">Bi-weekly</label>
+            <input type="radio" value="Weekly" id="weekly" name="freq"/>
+            <label for="weekly" class="radio">Weekly</label>
+          </div>
+
+        <label for="interest">Interest Rate:</label><br>
+        <input type="number" id="interest" name="interest" value="3">
+        <label for="interest">%</label><br><br>
+        <button type="button" onclick="calculation()">Calculate</button>
+        <label id="result-label" class="result-label-style"></label>
+    </form>
+
+    <p id="result"></p>
+
+</body>
+</html>
